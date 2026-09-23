@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
   initScrollSpy();
   initSkillTooltips();
+  initLightbox();
 });
 
 // ---------------------------------------------------------
@@ -181,6 +182,56 @@ function initSkillTooltips() {
 
   document.addEventListener('click', () => {
     tags.forEach(t => t.classList.remove('active'));
+  });
+}
+
+// ---------------------------------------------------------
+// Lightbox for project screenshots
+// ---------------------------------------------------------
+function initLightbox() {
+  const figures = document.querySelectorAll('.pd-shot');
+  if (!figures.length) return;
+
+  const overlay = document.createElement('div');
+  overlay.className = 'lightbox-overlay';
+  overlay.innerHTML = '<button class="lightbox-close" aria-label="닫기">✕</button><div class="lightbox-stack"></div>';
+  document.body.appendChild(overlay);
+
+  const stack = overlay.querySelector('.lightbox-stack');
+  const closeBtn = overlay.querySelector('.lightbox-close');
+
+  function open(images) {
+    stack.innerHTML = '';
+    images.forEach(img => {
+      const clone = document.createElement('img');
+      clone.className = 'lightbox-img';
+      clone.src = img.src;
+      clone.alt = img.alt || '';
+      stack.appendChild(clone);
+    });
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  figures.forEach(figure => {
+    const images = Array.from(figure.querySelectorAll('img'));
+    images.forEach(img => {
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', () => open(images));
+    });
+  });
+
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay || e.target === closeBtn) close();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
   });
 }
 
