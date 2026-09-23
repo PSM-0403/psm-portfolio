@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JejuTrip AI | 피수민 포트폴리오</title>
+<meta name="description" content="제주 여행 계획이 막막한 사람들을 위한 취향 맞춤 AI 코스 추천 서비스, JejuTrip AI 프로젝트 상세.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="cursor-glow" id="cursorGlow"></div>
+<div class="progress-bar" id="progressBar"></div>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">PSM<span class="dot">.</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html#about" class="nav-link">About</a>
+      <a href="../index.html#skills" class="nav-link">Skills</a>
+      <a href="../index.html#certificates" class="nav-link">Certificates</a>
+      <a href="../index.html#projects" class="nav-link">Projects</a>
+      <a href="../index.html#experience" class="nav-link">Experience</a>
+      <a href="../index.html#contact" class="nav-link">Contact</a>
+    </nav>
+    <a href="../index.html#contact" class="btn btn-small btn-outline nav-cta">연락하기</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="pd-hero">
+  <a href="../index.html#projects" class="pd-back reveal">← 포트폴리오로 돌아가기</a>
+
+  <div class="pd-badges reveal">
+    <span class="pd-badge">팀 프로젝트 · 4인</span>
+    <span class="pd-badge">2026.03 - 2026.04 (3주)</span>
+  </div>
+
+  <h1 class="pd-title reveal">JejuTrip AI</h1>
+  <p class="pd-tagline reveal">제주 여행 계획이 막막한 사람들을 위한 취향 맞춤 AI 코스 추천 서비스</p>
+
+  <div class="pd-hero-actions reveal">
+    <a href="https://github.com/PSM-0403/JejuTrip_AI" target="_blank" rel="noopener" class="btn btn-outline">GitHub ↗</a>
+    <a href="https://jejutripai.streamlit.app" target="_blank" rel="noopener" class="btn btn-primary">라이브 데모 →</a>
+  </div>
+
+  <div class="pd-banner reveal thumb-2">
+    <div class="pd-banner-brand">
+      <span class="pd-banner-icon-emoji">🍊</span>
+      <span class="pd-banner-title pd-banner-jeju"><em>Jeju</em>Trip AI</span>
+    </div>
+  </div>
+</div>
+
+<div class="pd-body">
+
+  <div class="pd-grid">
+    <div class="pd-block reveal">
+      <h2><span class="pd-num">Overview</span>어떤 문제를 풀었나</h2>
+      <p>
+        제주 여행을 계획 중이지만 일정 구성이 번거로운 사람, 혹은 특정 취향에 맞는 코스를 원하는 사람을 위한 서비스입니다.
+        제주 여행을 준비할 때 관광지를 하나하나 검색해서 일정을 짜야 하는 과정이 반복적이고 시간이 많이 든다는
+        불편함에서 기획이 시작됐습니다.
+      </p>
+    </div>
+    <div class="pd-block reveal">
+      <h2>정보</h2>
+      <ul class="pd-meta-list">
+        <li class="pd-meta-item"><span>기간</span><strong>2026.03.24 ~ 2026.04.10 (3주)</strong></li>
+        <li class="pd-meta-item"><span>참여인원</span><strong>4명</strong></li>
+        <li class="pd-meta-item"><span>담당 역할</span><strong>프로젝트 기획, 제주 관광지 데이터 수집(한국관광콘텐츠랩 API + 카카오맵 크롤링) 및 정리, 챗봇 기능 구현, UI 구성, GitHub 설정, Streamlit Cloud 배포</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="pd-block reveal">
+    <h2><span class="pd-num">Features</span>핵심 기능</h2>
+    <ul class="pd-list">
+      <li>여행 기간 · 카테고리 기반 일정별 코스 자동 생성</li>
+      <li>슬롯별 취향 키워드 입력 → CSV 리뷰 매칭 + Chroma 유사도 기반 추천</li>
+      <li>실제 CSV 리뷰·장소명에 매칭되는 곳만 후보로 남기는 하드 필터로, 존재하지 않는 장소나 특징을 지어내지 않도록 방지</li>
+      <li>추천 근거를 투명하게 표시해 왜 이 장소가 추천됐는지 확인 가능</li>
+      <li>AI 챗봇을 통한 실시간 코스 교체 및 후보 리스트 제시</li>
+      <li>숙소 출발 → 일정 → 복귀까지 총 이동거리가 최소가 되는 조합을 완전탐색으로 선택해 Folium 지도로 시각화</li>
+      <li>카카오 API로 실시간 숙소 검색, 경로·소요시간 계산, 지도 링크 제공</li>
+    </ul>
+  </div>
+
+  <div class="pd-block reveal">
+    <h2><span class="pd-num">Stack</span>Tech Stack</h2>
+    <div class="tech-pills">
+      <span class="tech-pill">Python</span><span class="tech-pill">Streamlit</span><span class="tech-pill">OpenAI API</span>
+      <span class="tech-pill">Chroma DB</span><span class="tech-pill">LangChain</span><span class="tech-pill">Kakao REST API</span>
+      <span class="tech-pill">Folium</span><span class="tech-pill">Pandas</span><span class="tech-pill">Selenium</span><span class="tech-pill">한국관광콘텐츠랩 API</span><span class="tech-pill">pytest</span>
+    </div>
+  </div>
+
+  <div class="pd-block reveal">
+    <h2><span class="pd-num">Results</span>결과 &amp; 성과</h2>
+    <ul class="pd-list">
+      <li>4인 팀에서 기획·데이터 수집·UI·배포까지 폭넓게 참여해 3주 만에 서비스 완성</li>
+      <li>한국관광콘텐츠랩 API와 카카오맵 크롤링으로 제주 관광지 1,054곳, 리뷰 18,845개 데이터베이스 구축, Streamlit 기반 UI 직접 구성</li>
+      <li>pytest 기반 테스트 코드를 작성해 핵심 로직 검증</li>
+      <li>API 호출을 병렬 처리로 개선해 추천 응답 속도를 20초에서 8초로 단축</li>
+    </ul>
+  </div>
+
+  <div class="pd-block reveal">
+    <h2><span class="pd-num">Retrospective</span>회고</h2>
+    <div class="pd-retro">
+      <p>데이터 분석 첫 프로젝트라 크롤링 과정에서 어려움이 많았는데, 팀원들과 협업하며 하나씩 해결해나갔습니다. 크롤링부터 서비스 완성까지 전 과정을 경험할 수 있었습니다.</p>
+      <p>한국관광콘텐츠랩 API에 제주의 모든 관광지가 등록되어 있는 건 아니라서, 실제로 다루지 못한 장소들이 있었다는 아쉬움이 남습니다. 리뷰도 장소당 최대 20개까지만 수집해서, 더 확보했다면 추천 정확도를 높일 수 있었을 것 같습니다.</p>
+      <p>추천 생성 시 API 호출이 누적되면서 속도가 느려지는 문제가 있었는데, 병렬 처리로 개선해 응답 속도를 20초에서 8초로 단축했습니다.</p>
+      <p>시행착오도 많았지만, 기획부터 배포까지 하나의 서비스를 온전히 완성해본 경험이었습니다.</p>
+    </div>
+  </div>
+
+  <div class="pd-footer-nav reveal">
+    <a href="jcrew.html" class="btn btn-outline">← 이전 프로젝트: J-CREW</a>
+    <a href="beautyguard.html" class="btn btn-outline">다음 프로젝트: BeautyGuard →</a>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p>&copy; <span id="year"></span> 피수민. All rights reserved.</p>
+    <button class="to-top" id="toTop" aria-label="맨 위로">↑</button>
+  </div>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

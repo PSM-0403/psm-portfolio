@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BeautyGuard | 피수민 포트폴리오</title>
+<meta name="description" content="화장품 MD를 위한 성분 기반 시장 인텔리전스 대시보드, BeautyGuard 프로젝트 상세.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="cursor-glow" id="cursorGlow"></div>
+<div class="progress-bar" id="progressBar"></div>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">PSM<span class="dot">.</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html#about" class="nav-link">About</a>
+      <a href="../index.html#skills" class="nav-link">Skills</a>
+      <a href="../index.html#certificates" class="nav-link">Certificates</a>
+      <a href="../index.html#projects" class="nav-link">Projects</a>
+      <a href="../index.html#experience" class="nav-link">Experience</a>
+      <a href="../index.html#contact" class="nav-link">Contact</a>
+    </nav>
+    <a href="../index.html#contact" class="btn btn-small btn-outline nav-cta">연락하기</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="pd-hero">
+  <a href="../index.html#projects" class="pd-back reveal">← 포트폴리오로 돌아가기</a>
+
+  <div class="pd-badges reveal">
+    <span class="pd-badge">팀 프로젝트 · 4인 (+고도화 1인)</span>
+    <span class="pd-badge">2026.04 - 2026.09</span>
+    <span class="pd-badge badge-award">🏆 최우수상 수상</span>
+  </div>
+
+  <h1 class="pd-title reveal">BeautyGuard</h1>
+  <p class="pd-tagline reveal">화장품 MD를 위한 성분 기반 시장 인텔리전스 대시보드</p>
+
+  <div class="pd-hero-actions reveal">
+    <a href="https://github.com/PSM-0403/BeautyGuard" target="_blank" rel="noopener" class="btn btn-outline">GitHub ↗</a>
+    <a href="https://beautyguard-dashboard.vercel.app" target="_blank" rel="noopener" class="btn btn-primary">라이브 데모 →</a>
+  </div>
+
+  <div class="pd-banner reveal thumb-3">
+    <div class="pd-banner-brand">
+      <img class="pd-banner-icon" src="../assets/icons/beautyguard-icon.png" alt="BeautyGuard 아이콘" width="56" height="56">
+      <span class="pd-banner-title">Beauty<em>Guard</em></span>
+    </div>
+  </div>
+</div>
+
+<div class="pd-body">
+
+  <div class="pd-grid">
+    <div class="pd-block reveal">
+      <h2><span class="pd-num">Overview</span>어떤 문제를 풀었나</h2>
+      <p>
+        화장품 브랜드의 MD(상품기획자)는 신제품을 기획할 때 검색 수요, 시장 공급 반응을 각각 다른 곳에서 따로 확인해야 합니다.
+        이 세 가지를 한 화면에서 파악하고, 지금 뜨는 성분·재고 리스크 성분을 AI 인사이트로 자동으로 찾아내 의사결정 시간을 줄이자는
+        아이디어에서 시작했습니다.
+      </p>
+    </div>
+    <div class="pd-block reveal">
+      <h2>정보</h2>
+      <ul class="pd-meta-list">
+        <li class="pd-meta-item"><span>기간</span><strong>2026.04.20 ~ 2026.05.20 (로컬 프로토타입 완성)<br>2026.08.24 ~ 2026.09.15 (최신 데이터로 크롤링 후 배포 작업 진행)</strong></li>
+        <li class="pd-meta-item"><span>참여인원</span><strong>4명 (이후 고도화는 1인 진행)</strong></li>
+        <li class="pd-meta-item"><span>담당 역할</span><strong>데이터 수집(크롤링), DB 적재 파이프라인, 리뷰 감성분석 AI 연동, AI 챗봇(전략 어시스턴트) 프롬프트 엔지니어링, 배포 &amp; 인프라(Render/Vercel/GitHub)</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="pd-block reveal">
+    <h2><span class="pd-num">Features</span>핵심 기능</h2>
+    <ul class="pd-list">
+      <li>검색 수요 지수 × 시장 공급 지수를 교차 분석해 성분을 기회 / 성장 / 공급과잉 / 관망 4분면으로 자동 분류, 가격 분포는 바이올린 차트로 시각화</li>
+      <li>네이버 DataLab 연동으로 성분 검색 관심도 추이, 연령대별 피부 고민 히트맵 제공</li>
+      <li>한국어 특화 AI 모델(KoELECTRA)로 리뷰 최대 300건을 긍정/중립/부정 자동 분류하고, 성분별 긍·부정 키워드 및 피부타입별 반응 빈도 제공</li>
+      <li>수요-공급 격차와 트렌드 급증을 자동 감지해 신제품 기회 · 재고 리스크 성분 후보 생성</li>
+      <li>대시보드 데이터를 근거로 자연어 질의에 답하는 GPT 기반 전략 어시스턴트 (실수치 기반 응답)</li>
+    </ul>
+  </div>
+
+  <div class="pd-block reveal">
+    <h2><span class="pd-num">Stack</span>Tech Stack</h2>
+    <div class="tech-pills">
+      <span class="tech-pill">Next.js 14</span><span class="tech-pill">React 18</span><span class="tech-pill">TypeScript</span>
+      <span class="tech-pill">Supabase</span><span class="tech-pill">FastAPI</span><span class="tech-pill">Uvicorn</span>
+      <span class="tech-pill">Selenium</span><span class="tech-pill">BeautifulSoup4</span><span class="tech-pill">Transformers</span>
+      <span class="tech-pill">PyTorch</span><span class="tech-pill">Pandas</span><span class="tech-pill">OpenAI API</span>
+      <span class="tech-pill">KoELECTRA</span><span class="tech-pill">네이버 DataLab API</span><span class="tech-pill">Vercel</span><span class="tech-pill">Render</span><span class="tech-pill">GitHub</span>
+    </div>
+  </div>
+
+  <div class="pd-block reveal">
+    <h2><span class="pd-num">Results</span>결과 &amp; 성과</h2>
+    <ul class="pd-list">
+      <li>수상 이후에도 프로토타입에 그치지 않고, 실사용 가능한 서비스로 만들기 위해 단독으로 클라우드 배포와 안정화 작업을 이어감</li>
+      <li>네이버 검색 트렌드, 올리브영 리뷰, 시장 공급 데이터를 5개 화면(시장요약/검색트렌드/리뷰분석/경보/AI Agent)으로 통합한 대시보드 구현</li>
+      <li>리뷰 적재 시점에 감성분석을 미리 계산해 DB에 저장하는 방식으로 개선해, 리뷰 분석 소요 시간을 3분 이상에서 8초로, 경보 계산을 6초로 단축</li>
+      <li>K-Digital Training 데이터분석가 부트캠프 최종프로젝트 경진대회 최우수상 수상</li>
+    </ul>
+    <p class="section-hint">정식 출품명: 화장품 성분 트렌드 라이프사이클 및 시장 반영 분석 기반 MD 의사결정 자동화 시스템</p>
+  </div>
+
+  <div class="pd-block reveal">
+    <h2><span class="pd-num">Retrospective</span>회고</h2>
+    <div class="pd-retro">
+      <p>Render 무료 티어 특성상 15분 미사용 시 슬립되고 첫 요청 재가동에 30~60초가 걸리는 콜드스타트 문제가 있는데, 현재는 이를 감안하고 구현했습니다.</p>
+      <p>초기에는 리뷰 감성분석 모델의 용량이 커서 RAM 512MB인 Render 무료 티어에서 메모리 초과 문제가 발생했는데, KoELECTRA-small 모델을 쓰고 PyTorch 스레드 수를 1로 고정해 해결했습니다.</p>
+      <p>올리브영은 짧은 시간에 상세페이지 요청이 몰리면 접속을 막아서, 크롤링할 때 요청 사이에 시간 간격을 두는 방식으로 대응했습니다.</p>
+      <p>상품당 최대 10개까지 리뷰를 크롤링해 감성분석을 하는데, 리뷰 수가 늘어나면서 실시간 분석 속도가 느려지는 문제가 있었습니다. 리뷰를 적재하는 시점에 감성분석을 미리 계산해 DB에 저장하는 방식으로 바꿔서, 분석 소요 시간을 크게 줄였습니다.</p>
+      <p>현재는 스킨케어 중 크림, 에센스/세럼/앰플 두 카테고리만 대상으로 수집하고 있는데(9/11~9/15 기준 고유 상품 107개, 리뷰 973건 확보), 선크림·클렌징 등으로 카테고리를 넓히면 더 신뢰도 높은 트렌드 분석이 가능할 것 같아 기회가 되면 해보고 싶습니다.</p>
+    </div>
+  </div>
+
+  <div class="pd-footer-nav reveal">
+    <a href="jejutrip.html" class="btn btn-outline">← 이전 프로젝트: JejuTrip AI</a>
+    <a href="jcrew.html" class="btn btn-outline">다음 프로젝트: J-CREW →</a>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p>&copy; <span id="year"></span> 피수민. All rights reserved.</p>
+    <button class="to-top" id="toTop" aria-label="맨 위로">↑</button>
+  </div>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>J-CREW | 피수민 포트폴리오</title>
+<meta name="description" content="유소년 농구교실을 위한 AI 통합 관리 플랫폼, J-CREW 프로젝트 상세.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="cursor-glow" id="cursorGlow"></div>
+<div class="progress-bar" id="progressBar"></div>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">PSM<span class="dot">.</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html#about" class="nav-link">About</a>
+      <a href="../index.html#skills" class="nav-link">Skills</a>
+      <a href="../index.html#certificates" class="nav-link">Certificates</a>
+      <a href="../index.html#projects" class="nav-link">Projects</a>
+      <a href="../index.html#experience" class="nav-link">Experience</a>
+      <a href="../index.html#contact" class="nav-link">Contact</a>
+    </nav>
+    <a href="../index.html#contact" class="btn btn-small btn-outline nav-cta">연락하기</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="pd-hero">
+  <a href="../index.html#projects" class="pd-back reveal">← 포트폴리오로 돌아가기</a>
+
+  <div class="pd-badges reveal">
+    <span class="pd-badge">개인 프로젝트 · 1인</span>
+    <span class="pd-badge">2026.05 - 현재 (MVP 완성, 테스트/수정 중)</span>
+  </div>
+
+  <h1 class="pd-title reveal">J-CREW</h1>
+  <p class="pd-tagline reveal">유소년 농구교실을 위한 AI 통합 관리 플랫폼</p>
+
+  <div class="pd-hero-actions reveal">
+    <a href="https://github.com/PSM-0403/jcrew" target="_blank" rel="noopener" class="btn btn-outline">GitHub ↗</a>
+    <a href="https://jcrewbasketball.vercel.app" target="_blank" rel="noopener" class="btn btn-primary">라이브 데모 →</a>
+  </div>
+
+  <div class="pd-banner reveal thumb-1">
+    <div class="logo-plate logo-plate-lg">
+      <img src="../assets/icons/jcrew-logo.jpg" alt="J-CREW 로고" width="120" height="120">
+    </div>
+  </div>
+</div>
+
+<div class="pd-body">
+
+  <div class="pd-grid">
+    <div class="pd-block reveal">
+      <h2><span class="pd-num">Overview</span>어떤 문제를 풀었나</h2>
+      <p>
+        유소년 농구교실에서 3년간 코치로 일하면서 회원 관리, 출석 체크, 수강료 확인, 학부모 소통 같은 행정 업무를
+        반복적으로 처리해야 했습니다. 이 과정에서 직접 느낀 불편함을 바탕으로, 강사와 회원(수강생·학부모) 모두를 위한
+        관리 플랫폼을 스스로 기획하고 개발했습니다.
+      </p>
+    </div>
+    <div class="pd-block reveal">
+      <h2>정보</h2>
+      <ul class="pd-meta-list">
+        <li class="pd-meta-item"><span>기간</span><strong>2026.05.06 ~ 현재 (MVP 완성, 테스트 및 수정 진행 중)</strong></li>
+        <li class="pd-meta-item"><span>참여인원</span><strong>1명 (기획·개발·배포 단독 진행)</strong></li>
+        <li class="pd-meta-item"><span>담당 역할</span><strong>기획부터 프론트엔드·백엔드 개발, DB 설계, AI 기능 구현, 배포까지 전 과정을 혼자 진행</strong></li>
+        <li class="pd-meta-item"><span>체험 계정</span><strong>관리자 jcrew1234<br>회원 피수민 / 2358 / 0000</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="pd-block reveal">
+    <h2><span class="pd-num">Features</span>핵심 기능</h2>
+    <ul class="pd-list">
+      <li>회원 가입 승인, 출석 체크</li>
+      <li>수강료 납부 관리 — 형제 할인 안내, 계좌이체 신청 후 강사 확인 처리</li>
+      <li>이탈 위험 회원 자동 감지 (룰 기반 판정 + AI 코멘트 생성)</li>
+      <li>학부모 알림 메시지 자동 생성 (AI)</li>
+      <li>월간 운영 리포트 자동 생성 (AI)</li>
+      <li>강사 &amp; 회원 실시간 1:1 채팅</li>
+      <li>회원용 AI 챗봇 (수업 예약·납부 안내 등)</li>
+      <li>홈 화면 설치가 가능한 PWA로 제작해 네이티브 앱에 가까운 사용 경험 제공</li>
+    </ul>
+  </div>
+
+  <div class="pd-block reveal">
+    <h2><span class="pd-num">Stack</span>Tech Stack</h2>
+    <div class="tech-pills">
+      <span class="tech-pill">React 19</span><span class="tech-pill">Vite</span><span class="tech-pill">Zustand</span>
+      <span class="tech-pill">JavaScript</span><span class="tech-pill">Supabase (PostgreSQL)</span>
+      <span class="tech-pill">Supabase Realtime</span><span class="tech-pill">Supabase Storage</span>
+      <span class="tech-pill">OpenAI API</span><span class="tech-pill">Vercel Serverless Functions</span>
+    </div>
+  </div>
+
+  <div class="pd-block reveal">
+    <h2><span class="pd-num">Results</span>결과 &amp; 성과</h2>
+    <ul class="pd-list">
+      <li>회원 관리 · 출석 · 실시간 채팅 · AI 에이전트 등 전체 기능을 실제 데이터로 반복 테스트했고, 이후 개인정보 보호를 위해 더미 데이터로 전환</li>
+      <li>12개 테이블 기반 데이터 모델을 설계해 회원관리 · 출결 · 결제 · AI 에이전트 결과까지 하나의 시스템으로 통합</li>
+      <li>OpenAI API 키가 클라이언트에 노출되지 않도록 Vercel Serverless Function으로 프록시 처리해 보안 확보</li>
+    </ul>
+  </div>
+
+  <div class="pd-block reveal">
+    <h2><span class="pd-num">Retrospective</span>회고</h2>
+    <div class="pd-retro">
+      <p>실제로 겪었던 불편함을 직접 해결하는 방식으로 개발하다 보니 더 몰입해서 깊이 고민할 수 있었고, 사용하면서 추가하고 싶은 기능이 계속 떠올라 자연스럽게 기능이 고도화됐습니다.</p>
+      <p>학원 운영에서 가장 중요한 결제 현황을 한눈에 확인하고 관리할 수 있게 된 점이 특히 만족스러웠습니다. 다만 아직 카드 결제 연동은 하지 못한 점이 아쉬운데, 추후 이 부분까지 연결하고 UI/디자인도 다듬어서 원장님께 전달할 계획입니다.</p>
+      <p>테스트 코드가 없어서 기능을 수정하거나 추가할 때마다 기존 기능이 제대로 동작하는지 수동으로 확인해야 하고, 이 과정에서 놓친 부분이 회귀 버그로 이어질 위험이 있습니다.</p>
+      <p>컴포넌트가 하나의 파일에 몰려있어 코드가 커질수록 유지보수가 어렵고, 관련 없는 기능까지 얽혀 있어 버그 원인을 찾기 어려워지는 문제도 있어 앞으로 보완이 필요합니다.</p>
+    </div>
+  </div>
+
+  <div class="pd-footer-nav reveal">
+    <a href="beautyguard.html" class="btn btn-outline">← 이전 프로젝트: BeautyGuard</a>
+    <a href="jejutrip.html" class="btn btn-outline">다음 프로젝트: JejuTrip AI →</a>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p>&copy; <span id="year"></span> 피수민. All rights reserved.</p>
+    <button class="to-top" id="toTop" aria-label="맨 위로">↑</button>
+  </div>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
